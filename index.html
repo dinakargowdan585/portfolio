@@ -11,239 +11,263 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>  
-<div id="boot">
-  <pre id="bootText"></pre>
-</div>  
-<nav class="glass-nav">
-
-  <div class="nav-item" onclick="scrollToSection('home')"><h3>HOME</h3></div>
-<div class="nav-item" onclick="scrollToSection('projects')"><h3>PROJECTS</h3></div>
-<div class="nav-item" onclick="scrollToSection('about')"><h3>ABOUT</h3></div>
-<div class="nav-item" onclick="scrollToSection('skills')"><h3>SKILLS</h3></div>
-<div class="nav-item" onclick="scrollToSection('contact')"><h3>CONTACT</h3></div>
-
-</nav>
-<!-- HERO -->
- <div class="bg-glow"></div>
- <div id="progress-bar"></div>
-<section id="home" class="hero">
-  <h1>
-   <span class="highlight">Cybersecurity Engineer student</span>
-</h1>
-  <p>
-    I find vulnerabilities, exploit them, and build secure systems.
-  </p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>PROJECTS</h2>
-
-  <div class="projects">
-    <div class="card">
-      <h3>SQL Injection Lab</h3>
-      <p>Simulated login bypass and database extraction.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-
-    <div class="card">
-      <h3>XSS Playground</h3>
-      <p>Tested reflected and stored XSS vulnerabilities.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
-
-    <div class="card">
-      <h3>CTF Writeups</h3>
-      <p>Documented solutions and techniques used in challenges.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
+<body>
+  <div id="boot">
+    <pre id="bootText"></pre>
   </div>
-</section>
-
-  
-
- <!-- ABOUT -->
- <section id="about" class="section reveal">
-  <h2>ABOUT</h2>
-  <div class="section-box">
-    <div class="about-container">
-       <div class="about-text">
-          <p>
-             I am persuing my degree in Cyber Security at Sri Siddhartha Institute of Technology,Tumkur.
-         </p>
-
-           <p>
-               Being a cybersecurity enthusiast, I have a strong passion for ethical hacking and penetration testing.I like to apply my skills to solve complex security challenges and learn from the community.
-            </p>
-
-             <p>
-              My goal is to continuously improve my skills in ethical hacking and be a part of building secure resilient systems.
-             </p>
+  <div class="nav-wrapper">
+    <nav class="glass-nav">
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-item" onclick="scrollToSection('home')" data-section="home">
+          <h3>HOME</h3>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('projects')" data-section="projects">
+          <h3>PROJECTS</h3>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('about')" data-section="about">
+          <h3>ABOUT</h3>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('skills')" data-section="skills">
+          <h3>SKILLS</h3>
+        </div>
+        <div class="nav-item" onclick="scrollToSection('contact')" data-section="contact">
+          <h3>CONTACT</h3>
+        </div>
       </div>
-         </div>
+    </nav>
   </div>
-</section>
-<!-- SKILLS -->
-<section id="skills" class="section reveal">
-  <div class="section-box">
-    <div class="skills-container">
-    <h2>SKILLS</h2>
-    <div class="skills">
-    
-      <span>Linux</span>
-     <span>CSS</span>
-      <span>Networking</span>
-      <span>Burp Suite</span>
-      <span>Web Security</span>
-  </div>
-  </div>
-</section>
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <div class="section-box">
-    
-    <h2>CONTACT</h2>
-    <p>Email:<a href="mailto:dinakargowdan585@email.com" target="_blank" style="color: #fff;;"> dinakargowdan585@email.com</a></p>
-  <p>GitHub:<a href="https://github.com/dinakargowdan585" target="_blank" style="color: #fff;;"> https://github.com/dinakargowdan585</a></p>
-  </div>
-</section>
+  <!-- HERO -->
+  <div class="bg-glow"></div>
+  <div id="progress-bar"></div>
+  <section id="home" class="hero">
+    <h1>
+      <span class="highlight">Cybersecurity Engineer student</span>
+    </h1>
+    <p>
+      I find vulnerabilities, exploit them, and build secure systems.
+    </p>
+  </section>
 
-<script>
-  window.addEventListener("scroll", () => {
-  const scrollTop = document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>PROJECTS</h2>
 
-  const progress = (scrollTop / height) * 100;
-  document.getElementById("progress-bar").style.width = progress + "%";
-});
-const glow = document.querySelector(".bg-glow");
+    <div class="projects">
+      <div class="card">
+        <!--<img src="iot car.jpeg" alt="IOT Project">-->
 
-window.addEventListener("scroll", () => {
-  const y = window.scrollY;
-  glow.style.transform = `translateY(${y * 0.2}px)`;
-});
-const reveals = document.querySelectorAll(".reveal");
-const cards = document.querySelectorAll(".card");
+        <h3>IOT PROJECTS</h3>
+        <p>Designed and implemented an IoT-based smart home system.</p>
 
-window.addEventListener("scroll", () => {
+        <div class="project-links">
+          <a href="iot car.jpeg" target="_blank">View Image</a>
 
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
+          <a href="https://github.com/yourusername/project1" target="_blank">View Code</a>
+        </div>
+      </div>
 
-    if (top < window.innerHeight - 80) {
-      el.classList.add("active");
+      <div class="card">
+        <h3>XSS Playground</h3>
+        <p>Tested reflected and stored XSS vulnerabilities.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">View Image</a>
+          <a href="#" target="_blank">View Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>CTF Writeups</h3>
+        <p>Documented solutions and techniques used in challenges.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">View Image</a>
+          <a href="#" target="_blank">View Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="section reveal">
+    <h2>ABOUT</h2>
+    <div class="section-box">
+      <div class="about-container">
+        <div class="about-text">
+          <p>
+            I am pursuing my degree in Cyber Security at Sri Siddhartha Institute of Technology, Tumkur.
+          </p>
+
+          <p>
+            Being a cybersecurity enthusiast, I have a strong passion for ethical hacking and penetration testing. I
+            like to apply my skills to solve complex security challenges and learn from the community.
+          </p>
+
+          <p>
+            My goal is to continuously improve my skills in ethical hacking and be a part of building secure resilient
+            systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills" class="section reveal">
+    <div class="section-box">
+      <div class="skills-container">
+        <h2>SKILLS</h2>
+        <div class="skills">
+
+          <span>Linux</span>
+          <span>CSS</span>
+          <span>Networking</span>
+          <span>Burp Suite</span>
+          <span>Web Security</span>
+        </div>
+      </div>
+  </section>
+  <!-- CONTACT -->
+
+  <section id="contact" class="section reveal">
+    <div class="section-box">
+
+      <h2>CONTACT</h2>
+      <p>Email:<a href="mailto:dinakargowdan585@email.com" target="_blank" style="color: #fff;;">
+          dinakargowdan585@email.com</a></p>
+      <p>GitHub:<a href="https://github.com/dinakargowdan585" target="_blank" style="color: #fff;;">
+          https://github.com/dinakargowdan585</a></p>
+    </div>
+  </section>
+  <script>
+    // ===== SELECT ELEMENTS =====
+    const reveals = document.querySelectorAll(".reveal");
+    const cards = document.querySelectorAll(".card");
+    const sections = document.querySelectorAll("section");
+    const nav = document.querySelector(".glass-nav");
+    const glow = document.querySelector(".bg-glow");
+    const revealGroups = document.querySelectorAll(".reveal-group");
+    // ===== SINGLE SCROLL HANDLER =====
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
     }
-  });
-const nav = document.querySelector(".glass-nav");
+    revealGroups.forEach(group => {
+      const items = group.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-});
+      const groupTop = group.getBoundingClientRect().top;
 
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
+      if (groupTop < window.innerHeight - 80) {
+        items.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("active");
+          }, index * 150); // delay between items
+        });
+      }
+    });
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
 
-    if (top < window.innerHeight - 80) {
-      card.classList.add("active");
+      // 🔥 Reveal animation
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 80) {
+          el.classList.add("active");
+        }
+      });
+
+      // 🔥 Card animation
+      cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < windowHeight - 80) {
+          card.classList.add("active");
+        }
+      });
+
+      // 🔥 Section in-view effect
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top < windowHeight * 0.7 && rect.bottom > 100) {
+          section.classList.add("in-view");
+        } else {
+          section.classList.remove("in-view");
+        }
+      });
+
+      // 🔥 Navbar scroll effect
+      if (scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+
+      // 🔥 Active nav highlight
+      let current = "";
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        if (scrollY >= top - 200) {
+          current = section.id;
+        }
+      });
+
+      document.querySelectorAll(".nav-item").forEach(item => {
+        item.classList.remove("active");
+        if (item.dataset.section === current) {
+          item.classList.add("active");
+        }
+      });
+
+      // 🔥 Parallax glow
+      if (glow) {
+        glow.style.transform = `translateY(${scrollY * 0.2}px)`;
+      }
+    });
+
+    // ===== SMOOTH SCROLL FUNCTION =====
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  });
 
-});
-/* 🔥 ADD THIS FUNCTION */
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
+    // ===== BOOT ANIMATION =====
+    const lines = [
+      "[ OK ] Initializing system...",
+      "[ OK ] Loading modules...",
+      "[ OK ] Establishing secure connection...",
+      "[ OK ] Access granted.",
+      "",
+      "Welcome to my portfolio .."
+    ];
 
-    if (top < window.innerHeight - 80) {
-      el.classList.add("active");
+    let i = 0;
+    const bootText = document.getElementById("bootText");
 
+    function typeLine() {
+      if (i < lines.length) {
+        bootText.innerHTML += lines[i] + "\n";
+        i++;
+        setTimeout(typeLine, 700);
+      } else {
+        setTimeout(() => {
+          document.getElementById("boot").style.display = "none";
+        }, 800);
+      }
     }
-  });
-});
 
-const sections = document.querySelectorAll(".section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight * 0.7 && rect.bottom > 100) {
-      section.classList.add("in-view");
-    } else {
-      section.classList.remove("in-view");
-    }
-  });
-});
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-const lines = [
-  "[ OK ] Initializing system...",
-  "[ OK ] Loading modules...",
-  "[ OK ] Establishing secure connection...",
-  "[ OK ] Access granted.",
-  "",
-  "Welcome to my portfolio .."
-];
-
-let i = 0;
-const bootText = document.getElementById("bootText");
-
-function typeLine() {
-  if (i < lines.length) {
-    bootText.innerHTML += lines[i] + "\n";
-    i++;
-    setTimeout(typeLine, 700);
-  } else {
-    setTimeout(() => {
-      document.getElementById("boot").style.display = "none";
-    }, 800);
-  }
-}
-
-typeLine();
-
-
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const top = section.offsetTop;
-    if (scrollY >= top - 100) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navItems.forEach(item => {
-    item.classList.remove("active");
-    if (item.textContent.toLowerCase().includes(current)) {
-      item.classList.add("active");
-    }
-  });
-});
-
-
-</script>
+    typeLine();
+  </script>
 
 </body>
+
 </html>
 </body>
+
 </html>
