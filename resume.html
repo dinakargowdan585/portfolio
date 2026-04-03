@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Print-friendly resume for Dinakar Gowda, cybersecurity student.">
+  <title>Dinakar Gowda | Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050608;
+      --panel: #0e141b;
+      --text: #f4f7fb;
+      --muted: #9aa8b5;
+      --accent: #00ffcc;
+      --border: rgba(148, 163, 184, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top left, rgba(0, 255, 204, 0.08), transparent 30%), var(--bg);
+      color: var(--text);
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 32px auto;
+      padding: 40px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--panel);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+    }
+
+    .summary {
+      max-width: 720px;
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .actions button,
+    .actions a {
+      padding: 14px 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      text-decoration: none;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .actions button {
+      background: var(--accent);
+      color: #02100d;
+      border-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    section + section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      margin-bottom: 18px;
+    }
+
+    .item {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .item + .item {
+      margin-top: 16px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .meta,
+    li,
+    .contact-link {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .meta {
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 14px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 0.84rem;
+    }
+
+    .contact-link {
+      display: block;
+      text-decoration: none;
+      margin-top: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 780px) {
+      main {
+        padding: 24px;
+      }
+
+      header,
+      .grid {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      main {
+        margin: 0;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        background: #fff;
+      }
+
+      .actions {
+        display: none;
+      }
+
+      .item {
+        break-inside: avoid;
+      }
+
+      .summary,
+      .meta,
+      li,
+      .contact-link {
+        color: #333;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="subtitle">Cybersecurity Student</p>
+        <h1>Dinakar Gowda</h1>
+        <p class="summary">
+          Cybersecurity student passionate about ethical hacking, web security, IoT systems, and practical vulnerability analysis.
+          Seeking opportunities to apply lab-driven security learning and grow into a security engineering role.
+        </p>
+      </div>
+      <div class="actions">
+        <button type="button" onclick="window.print()">Print / Save PDF</button>
+        <a href="index.html">Back to Portfolio</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section>
+          <h2>Projects</h2>
+          <article class="item">
+            <h3>Smart Home Monitoring System</h3>
+            <p class="meta">IoT project focused on connected-device workflows and secure design thinking.</p>
+            <ul>
+              <li>Designed a smart home prototype with sensor monitoring and device control features.</li>
+              <li>Studied practical risks around connected devices and access flow.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>XSS Practice Lab</h3>
+            <p class="meta">Web security practice for reflected and stored XSS testing and mitigation learning.</p>
+            <ul>
+              <li>Tested payload behavior, impact, and browser-side execution patterns.</li>
+              <li>Practiced mitigation concepts including validation and output encoding.</li>
+            </ul>
+          </article>
+          <article class="item">
+            <h3>CTF Writeups</h3>
+            <p class="meta">Challenge documentation focused on methodology, troubleshooting, and learning retention.</p>
+            <ul>
+              <li>Captured recon, vulnerability triage, exploitation notes, and lessons learned.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <article class="item">
+            <h3>Sri Siddhartha Institute of Technology, Tumkur</h3>
+            <p class="meta">Degree in Cyber Security | Currently pursuing</p>
+          </article>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <h2>Skills</h2>
+          <div class="item">
+            <div class="skills">
+              <span>Linux</span>
+              <span>Networking</span>
+              <span>Burp Suite</span>
+              <span>Nmap</span>
+              <span>Wireshark</span>
+              <span>OWASP Top 10</span>
+              <span>Penetration Testing</span>
+              <span>Web Security</span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <article class="item">
+            <a class="contact-link" href="mailto:dinakargowdan585@email.com">dinakargowdan585@email.com</a>
+            <a class="contact-link" href="https://github.com/dinakargowdan585" target="_blank" rel="noreferrer">
+              github.com/dinakargowdan585
+            </a>
+          </article>
+        </section>
+
+        <section>
+          <h2>Strengths</h2>
+          <article class="item">
+            <ul>
+              <li>Security-first mindset</li>
+              <li>Clear technical documentation</li>
+              <li>Curiosity and consistent hands-on learning</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,273 +1,351 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
-
-  <link rel="stylesheet" href="index.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Portfolio of Dinakar Gowda, a cybersecurity student focused on ethical hacking, web security, and secure systems."
+  >
+  <meta name="theme-color" content="#00ffcc">
+  <meta property="og:title" content="Dinakar Gowda | Cybersecurity Portfolio">
+  <meta
+    property="og:description"
+    content="Cybersecurity student portfolio featuring web security, IoT, CTF learning, and secure systems work."
+  >
+  <meta property="og:type" content="website">
+  <title>Dinakar Gowda | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <div id="boot">
+  <div id="boot" aria-hidden="true">
     <pre id="bootText"></pre>
   </div>
-  <div class="nav-wrapper">
-    <nav class="glass-nav">
-      <div class="menu-btn" onclick="toggleMenu()">☰</div>
-      <div class="nav-links" id="navLinks">
-        <div class="nav-item" onclick="scrollToSection('home')" data-section="home">
-          <h3>HOME</h3>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('projects')" data-section="projects">
-          <h3>PROJECTS</h3>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('about')" data-section="about">
-          <h3>ABOUT</h3>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('skills')" data-section="skills">
-          <h3>SKILLS</h3>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('contact')" data-section="contact">
-          <h3>CONTACT</h3>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- HERO -->
+
   <div class="bg-glow"></div>
   <div id="progress-bar"></div>
-  <section id="home" class="hero">
-    <h1>
-      <span class="highlight">Cybersecurity Engineer student</span>
-    </h1>
-    <p>
-      I find vulnerabilities, exploit them, and build secure systems.
-    </p>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>PROJECTS</h2>
-
-    <div class="projects">
-      <div class="card">
-        <!--<img src="iot car.jpeg" alt="IOT Project">-->
-
-        <h3>IOT PROJECTS</h3>
-        <p>Designed and implemented an IoT-based smart home system.</p>
-
-        <div class="project-links">
-          <a href="iot car.jpeg" target="_blank">View Image</a>
-
-          <a href="https://github.com/yourusername/project1" target="_blank">View Code</a>
-        </div>
+  <header class="nav-wrapper">
+    <nav class="glass-nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">DG</a>
+      <button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <div class="nav-links" id="navLinks">
+        <button class="nav-item active" type="button" data-section="home">Home</button>
+        <button class="nav-item" type="button" data-section="projects">Projects</button>
+        <button class="nav-item" type="button" data-section="about">About</button>
+        <button class="nav-item" type="button" data-section="skills">Skills</button>
+        <button class="nav-item" type="button" data-section="achievements">Achievements</button>
+        <button class="nav-item" type="button" data-section="contact">Contact</button>
       </div>
+    </nav>
+  </header>
 
-      <div class="card">
-        <h3>XSS Playground</h3>
-        <p>Tested reflected and stored XSS vulnerabilities.</p>
-        <div class="project-links">
-          <a href="#" target="_blank">View Image</a>
-          <a href="#" target="_blank">View Code</a>
-        </div>
+  <main>
+    <section id="home" class="hero section in-view">
+      <p class="eyebrow">Cybersecurity Portfolio</p>
+      <h1>
+        I am <span class="highlight">Dinakar Gowda</span>, a cybersecurity student focused on ethical hacking and defensive engineering.
+      </h1>
+      <p class="hero-copy">
+        I test web apps, study vulnerabilities, and document security learnings with a goal of landing entry-level
+        security engineering and SOC-facing opportunities.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="resume.html" target="_blank" rel="noreferrer">Open Resume</a>
       </div>
-
-      <div class="card">
-        <h3>CTF Writeups</h3>
-        <p>Documented solutions and techniques used in challenges.</p>
-        <div class="project-links">
-          <a href="#" target="_blank">View Image</a>
-          <a href="#" target="_blank">View Code</a>
-        </div>
+      <div class="hero-stats" aria-label="Highlights">
+        <article class="stat-card">
+          <span>Core Focus</span>
+          <strong>Web Security</strong>
+        </article>
+        <article class="stat-card">
+          <span>Lab Practice</span>
+          <strong>CTF + XSS Testing</strong>
+        </article>
+        <article class="stat-card">
+          <span>Goal</span>
+          <strong>Security Engineer</strong>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section id="projects" class="section reveal">
+      <p class="section-label">Selected Work</p>
+      <h2>Projects</h2>
 
-
-  <!-- ABOUT -->
-
-  <section id="about" class="section reveal">
-    <h2>ABOUT</h2>
-    <div class="section-box">
-      <div class="about-container">
-        <div class="about-text">
+      <div class="projects">
+        <article class="card">
+          <div class="project-icon">IoT</div>
+          <p class="card-tag">IoT Security</p>
+          <h3>Smart Home Monitoring System</h3>
           <p>
-            I am pursuing my degree in Cyber Security at Sri Siddhartha Institute of Technology, Tumkur.
+            Built an IoT-based home automation prototype and explored practical security considerations around connected devices.
           </p>
+          <ul class="card-points">
+            <li>Device control and sensor monitoring</li>
+            <li>Network communication and access flow</li>
+            <li>Security-first thinking for connected systems</li>
+          </ul>
+          <div class="project-links">
+            <a href="mailto:dinakargowdan585@email.com">Request demo</a>
+            <a href="https://github.com/dinakargowdan585" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </article>
 
+        <article class="card">
+          <div class="project-icon">XSS</div>
+          <p class="card-tag">Web Security</p>
+          <h3>XSS Practice Lab</h3>
           <p>
-            Being a cybersecurity enthusiast, I have a strong passion for ethical hacking and penetration testing. I
-            like to apply my skills to solve complex security challenges and learn from the community.
+            Practiced reflected and stored XSS exploitation patterns and studied mitigation techniques for safer web applications.
           </p>
+          <ul class="card-points">
+            <li>Payload testing and browser-side impact analysis</li>
+            <li>Input validation and output encoding concepts</li>
+            <li>Hands-on use of security testing workflows</li>
+          </ul>
+          <div class="project-links">
+            <a href="#contact">Discuss project</a>
+            <a href="https://github.com/dinakargowdan585" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </article>
 
+        <article class="card">
+          <div class="project-icon">CTF</div>
+          <p class="card-tag">CTF Research</p>
+          <h3>Capture The Flag Writeups</h3>
           <p>
-            My goal is to continuously improve my skills in ethical hacking and be a part of building secure resilient
-            systems.
+            Documented techniques, troubleshooting steps, and learnings from security challenges to improve repeatable methodology.
           </p>
-        </div>
+          <ul class="card-points">
+            <li>Reconnaissance and vulnerability triage</li>
+            <li>Exploit analysis and clear technical notes</li>
+            <li>Consistent learning from challenge solving</li>
+          </ul>
+          <div class="project-links">
+            <a href="#contact">Ask for writeups</a>
+            <a href="https://github.com/dinakargowdan585" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
+    <section id="about" class="section reveal">
+      <p class="section-label">About Me</p>
+      <h2>About</h2>
+      <div class="section-box">
+        <p>
+          I am pursuing a degree in Cyber Security at Sri Siddhartha Institute of Technology, Tumkur, and I am
+          actively building my skills in ethical hacking, web security, and network fundamentals.
+        </p>
+        <p>
+          I enjoy breaking down security problems, testing how systems fail, and learning how to design stronger
+          defenses. My goal is to grow into a security engineer who can contribute to practical, trustworthy systems.
+        </p>
+      </div>
+    </section>
 
-  <section id="skills" class="section reveal">
-    <div class="section-box">
-      <div class="skills-container">
-        <h2>SKILLS</h2>
+    <section id="skills" class="section reveal">
+      <p class="section-label">Technical Toolkit</p>
+      <h2>Skills</h2>
+      <div class="section-box">
         <div class="skills">
-
           <span>Linux</span>
-          <span>CSS</span>
           <span>Networking</span>
           <span>Burp Suite</span>
+          <span>Nmap</span>
+          <span>Wireshark</span>
+          <span>OWASP Top 10</span>
           <span>Web Security</span>
+          <span>Penetration Testing</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Git & GitHub</span>
+          <span>JavaScript Basics</span>
         </div>
       </div>
-  </section>
-  <!-- CONTACT -->
+    </section>
 
-  <section id="contact" class="section reveal">
-    <div class="section-box">
+    <section id="achievements" class="section reveal">
+      <p class="section-label">Credibility</p>
+      <h2>Achievements & Learning</h2>
+      <div class="achievement-grid">
+        <article class="achievement-card">
+          <span>01</span>
+          <h3>Security Lab Practice</h3>
+          <p>
+            Built hands-on confidence by practicing vulnerability testing, payload analysis, and structured
+            troubleshooting in lab environments.
+          </p>
+        </article>
+        <article class="achievement-card">
+          <span>02</span>
+          <h3>CTF Documentation Habit</h3>
+          <p>
+            Writing challenge notes and walkthroughs to improve repeatability, communication, and technical recall.
+          </p>
+        </article>
+        <article class="achievement-card">
+          <span>03</span>
+          <h3>Continuous Upskilling</h3>
+          <p>
+            Strengthening Linux, networking, OWASP concepts, and common security tooling while pursuing my degree.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <h2>CONTACT</h2>
-      <p>Email:<a href="mailto:dinakargowdan585@email.com" target="_blank" style="color: #fff;;">
-          dinakargowdan585@email.com</a></p>
-      <p>GitHub:<a href="https://github.com/dinakargowdan585" target="_blank" style="color: #fff;;">
-          https://github.com/dinakargowdan585</a></p>
-    </div>
-  </section>
+    <section id="contact" class="section reveal">
+      <p class="section-label">Let us Connect</p>
+      <h2>Contact</h2>
+      <div class="section-box contact-box">
+        <p>
+          Open to cybersecurity learning opportunities, project discussions, and collaboration.
+        </p>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:dinakargowdan585@email.com">
+            <span>Email</span>
+            <strong>dinakargowdan585@email.com</strong>
+          </a>
+          <a class="contact-item" href="https://github.com/dinakargowdan585" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/dinakargowdan585</strong>
+          </a>
+          <a class="contact-item" href="resume.html" target="_blank" rel="noreferrer">
+            <span>Resume</span>
+            <strong>Open print-friendly resume</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Dinakar Gowda. Built as a cybersecurity portfolio with a security-first mindset.</p>
+    <a href="#home">Back to top</a>
+  </footer>
+
   <script>
-    // ===== SELECT ELEMENTS =====
     const reveals = document.querySelectorAll(".reveal");
     const cards = document.querySelectorAll(".card");
     const sections = document.querySelectorAll("section");
     const nav = document.querySelector(".glass-nav");
     const glow = document.querySelector(".bg-glow");
-    const revealGroups = document.querySelectorAll(".reveal-group");
-    // ===== SINGLE SCROLL HANDLER =====
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("active");
-    }
-    revealGroups.forEach(group => {
-      const items = group.querySelectorAll(".reveal");
+    const progressBar = document.getElementById("progress-bar");
+    const menuButton = document.querySelector(".menu-btn");
+    const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-item");
+    const boot = document.getElementById("boot");
+    const bootText = document.getElementById("bootText");
 
-      const groupTop = group.getBoundingClientRect().top;
-
-      if (groupTop < window.innerHeight - 80) {
-        items.forEach((el, index) => {
-          setTimeout(() => {
-            el.classList.add("active");
-          }, index * 150); // delay between items
-        });
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    });
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
+      navLinks.classList.remove("active");
+      menuButton.setAttribute("aria-expanded", "false");
+    }
 
-      // 🔥 Reveal animation
-      reveals.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < windowHeight - 80) {
+    navItems.forEach((item) => {
+      item.addEventListener("click", () => scrollToSection(item.dataset.section));
+    });
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    function updateProgressBar() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    function updateScrollState() {
+      const scrollY = window.scrollY;
+      const triggerLine = window.innerHeight - 80;
+
+      reveals.forEach((el) => {
+        if (el.getBoundingClientRect().top < triggerLine) {
           el.classList.add("active");
         }
       });
 
-      // 🔥 Card animation
-      cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-        if (top < windowHeight - 80) {
+      cards.forEach((card) => {
+        if (card.getBoundingClientRect().top < triggerLine) {
           card.classList.add("active");
         }
       });
 
-      // 🔥 Section in-view effect
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-
-        if (rect.top < windowHeight * 0.7 && rect.bottom > 100) {
-          section.classList.add("in-view");
-        } else {
-          section.classList.remove("in-view");
-        }
+        section.classList.toggle(
+          "in-view",
+          rect.top < window.innerHeight * 0.7 && rect.bottom > 100
+        );
       });
 
-      // 🔥 Navbar scroll effect
-      if (scrollY > 50) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
+      nav.classList.toggle("scrolled", scrollY > 50);
 
-      // 🔥 Active nav highlight
-      let current = "";
-      sections.forEach(section => {
-        const top = section.offsetTop;
-        if (scrollY >= top - 200) {
+      let current = "home";
+      sections.forEach((section) => {
+        if (scrollY >= section.offsetTop - 220) {
           current = section.id;
         }
       });
 
-      document.querySelectorAll(".nav-item").forEach(item => {
-        item.classList.remove("active");
-        if (item.dataset.section === current) {
-          item.classList.add("active");
-        }
+      navItems.forEach((item) => {
+        item.classList.toggle("active", item.dataset.section === current);
       });
 
-      // 🔥 Parallax glow
       if (glow) {
         glow.style.transform = `translateY(${scrollY * 0.2}px)`;
       }
-    });
 
-    // ===== SMOOTH SCROLL FUNCTION =====
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
+      updateProgressBar();
     }
 
-
-    // ===== BOOT ANIMATION =====
-    const lines = [
-      "[ OK ] Initializing system...",
-      "[ OK ] Loading modules...",
-      "[ OK ] Establishing secure connection...",
+    const bootLines = [
+      "[ OK ] Initializing portfolio interface...",
+      "[ OK ] Loading security projects...",
+      "[ OK ] Establishing secure session...",
       "[ OK ] Access granted.",
       "",
-      "Welcome to my portfolio .."
+      "Welcome to Dinakar Gowda's portfolio."
     ];
 
-    let i = 0;
-    const bootText = document.getElementById("bootText");
+    let lineIndex = 0;
 
-    function typeLine() {
-      if (i < lines.length) {
-        bootText.innerHTML += lines[i] + "\n";
-        i++;
-        setTimeout(typeLine, 700);
-      } else {
-        setTimeout(() => {
-          document.getElementById("boot").style.display = "none";
-        }, 800);
+    function typeBootLine() {
+      if (lineIndex < bootLines.length) {
+        bootText.textContent += `${bootLines[lineIndex]}\n`;
+        lineIndex += 1;
+        setTimeout(typeBootLine, 260);
+        return;
       }
+
+      setTimeout(() => {
+        boot.classList.add("boot-hidden");
+      }, 500);
     }
 
-    typeLine();
+    window.addEventListener("scroll", updateScrollState);
+    window.addEventListener("resize", updateProgressBar);
+    window.addEventListener("load", () => {
+      updateScrollState();
+      typeBootLine();
+    });
   </script>
-
 </body>
-
-</html>
-</body>
-
 </html>
